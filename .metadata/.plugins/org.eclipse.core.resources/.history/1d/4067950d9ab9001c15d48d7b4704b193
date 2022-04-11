@@ -28,6 +28,7 @@ public class RunStatechart {
 		while(run) {
 			String option = reader.readLine();
 			
+			
 			if (option.equals("white")) {
 				print(s);
 				s.raiseWhite();

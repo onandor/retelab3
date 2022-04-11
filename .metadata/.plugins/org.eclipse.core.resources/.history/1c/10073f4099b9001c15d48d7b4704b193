@@ -6,8 +6,6 @@ import hu.bme.mit.yakindu.analysis.TimerService;
 import hu.bme.mit.yakindu.analysis.example.ExampleStatemachine;
 import hu.bme.mit.yakindu.analysis.example.IExampleStatemachine;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 
 
 public class RunStatechart {
@@ -23,26 +21,14 @@ public class RunStatechart {
 		s.raiseStart();
 		s.runCycle();
 		
-		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		boolean run = true;
 		while(run) {
-			String option = reader.readLine();
-			
-			if (option.equals("white")) {
-				print(s);
-				s.raiseWhite();
-				s.runCycle();
-			}
-			else if (option.equals("black")) {
-				print(s);
-				s.raiseBlack();
-				s.runCycle();
-			}
-			else if (option.equals("exit")) {
-				run = false;
-			}
+			System.in.read();
 		}
 		
+		s.raiseWhite();
+		s.runCycle();
+		print(s);
 		System.exit(0);
 	}
 

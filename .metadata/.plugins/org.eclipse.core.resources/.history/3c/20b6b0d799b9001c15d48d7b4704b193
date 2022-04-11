@@ -26,7 +26,8 @@ public class RunStatechart {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		boolean run = true;
 		while(run) {
-			String option = reader.readLine();
+			String option =
+			
 			
 			if (option.equals("white")) {
 				print(s);
